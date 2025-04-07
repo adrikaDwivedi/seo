@@ -1,0 +1,130 @@
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    padding-top: 20px;
+    background-color: #FF5A5F;
+    color: white;
+    transition: 0.3s;
+}
+.sidebar h3 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.sidebar a {
+    color: #ffffff;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+.sidebar a:hover {
+    background-color: #F38181;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./bg.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    transition: all 0.3s;
+}
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.hero p {
+    font-size: 1.3em;
+    color: #FFF8DC;
+}
+.hero a.btn {
+    background-color: #FFD700;
+    border: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+.hero a.btn:hover {
+    background-color: #FFC107;
+}
+
+.destination-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.destination-card img {
+    height: 200px;
+    object-fit: cover;
+}
+.destination-card h5 {
+    color: #FF5A5F;
+}
+
+#services {
+    background-color: #F5F5F5;
+    color: #333;
+    padding-top: 40px;
+}
+#services h4 {
+    color: #FF5A5F;
+}
+#services .col-md-4 i {
+    font-size: 2em;
+    color: #FF5A5F;
+    margin-bottom: 10px;
+}
+
+#contact .form-control {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+#contact button {
+    background-color: #FF5A5F;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+#contact button:hover {
+    background-color: #F38181;
+}
+
+footer {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    font-size: 24px;
+    background-color: #FF5A5F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.back-to-top:hover {
+    background-color: #F38181;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris, France - Explore the World</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background-image: url('./parisbg.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            background-position: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero p {
+            font-size: 1.3em;
+            color: #FFF8DC;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Paris, France</h1>
+        <p>Experience the charm of the City of Lights with its art, culture, and cuisine.</p>
+    </div>
+
+    <div class="container py-5">
+        <h2 class="text-center" style="color: #FF5A5F;">Features of Paris</h2>
+        <ul>
+            <li><strong>Eiffel Tower:</strong> One of the most iconic landmarks in the world, offering panoramic views of Paris.</li>
+            <li><strong>Luxembourg Gardens:</strong> A beautiful park in the heart of the city, perfect for relaxation and strolls.</li>
+            <li><strong>World-Class Museums:</strong> Home to the Louvre and Musée d'Orsay, Paris is a hub for art and history enthusiasts.</li>
+            <li><strong>Gastronomy:</strong> Indulge in French cuisine, from croissants and pastries to gourmet dining in Michelin-starred restaurants.</li>
+            <li><strong>Champs-Élysées:</strong> A famous avenue lined with shops, theaters, and cafés, perfect for a leisurely walk.</li>
+            <li><strong>Montmartre:</strong> The artistic district known for its charming streets, cafes, and the beautiful Sacré-Cœur Basilica.</li>
+        </ul>
+
+        <h2 class="text-center" style="color: #FF5A5F;">Paris City Gallery</h2>
+        <div class="row gallery">
+            <div class="col-md-4 mb-3">
+                <img src="paris1.jpeg" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="paris2.jpeg" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="paris3.jpeg" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="paris4.jpeg" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="paris5.jpeg" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="paris6.jpeg" class="img-fluid" data-toggle="modal" data-target="#imageModal">
+            </div>
+        </div>
+        <a href="index.html" class="btn btn-primary mt-3">Back to Home</a>
+
+    </div>
+
+    <!-- Modal with Carousel -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Paris City Gallery</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="paris1.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="paris2.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="paris3.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="paris4.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="paris5.jpeg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="paris6.jpeg" class="d-block w-100">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Bookings - Explore the World</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./ca3//styles.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4" style="color: #FF5A5F;">Book Your Stay</h2>
+    <p class="text-center">Find the best hotels for your next adventure!</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Available Hotels</h4>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <h5 class="mb-1">Hotel Paris</h5>
+                    <p class="mb-1">Experience luxury in the heart of Paris.</p>
+                    <small>Price: $200/night</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <h5 class="mb-1">Tokyo Inn</h5>
+                    <p class="mb-1">A blend of modern comfort and traditional hospitality.</p>
+                    <small>Price: $150/night</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <h5 class="mb-1">New York Suites</h5>
+                    <p class="mb-1">Stay in the heart of the Big Apple.</p>
+                    <small>Price: $250/night</small>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Booking Form</h4>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="hotel">Select Hotel</label>
+                    <select class="form-control" id="hotel">
+                        <option>Hotel Paris</option>
+                        <option>Tokyo Inn</option>
+                        <option>New York Suites</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="checkIn">Check-in Date</label>
+                        <input type="date" class="form-control" id="checkIn" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="checkOut">Check-out Date</label>
+                        <input type="date" class="form-control" id="checkOut" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" class="form-control" id="guests" min="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Book Now</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center py-2">
+    <p>© 2024 Explore the World. All Rights Reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const today = new Date().toISOString().split('T')[0]; 
+        document.getElementById('checkIn').setAttribute('min', today);
+        document.getElementById('checkOut').setAttribute('min', today);
+
+        const guestsInput = document.getElementById('guests');
+        guestsInput.addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9]/g, ''); 
+        });
+    });
+
+    document.getElementById('bookingForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const checkIn = document.getElementById('checkIn').value;
+        const checkOut = document.getElementById('checkOut').value;
+        const guests = document.getElementById('guests').value;
+
+        let isValid = true;
+
+        if (new Date(checkIn) >= new Date(checkOut)) {
+            alert("Check-out date must be after the check-in date.");
+            isValid = false;
+        }
+
+        if (guests < 1) {
+            alert("Number of guests must be at least 1.");
+            isValid = false;
+        }
+
+        if (isValid) {
+            alert("Booking confirmed! We will send you a confirmation email shortly.");
+            document.getElementById('bookingForm').reset();
+        }
+    });
+</script>
+</body>
+</html>
